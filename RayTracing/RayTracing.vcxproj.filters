@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{f5fd81b5-b9e2-46fb-a008-86993664b025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Colors">
+      <UniqueIdentifier>{743cc1d9-980a-4cb0-915f-8421bfe80527}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Geometry">
+      <UniqueIdentifier>{32e22dec-ef58-444c-9a6f-5fc2906149d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Image">
+      <UniqueIdentifier>{5c015370-19be-4882-ab39-4512bb63a4bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Integrators">
+      <UniqueIdentifier>{8f5c6440-88d1-4b87-8f03-3ae67b34808b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Materials">
+      <UniqueIdentifier>{8bfb5dc4-4da7-4d41-b3ca-34611d9dbde1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Math">
+      <UniqueIdentifier>{5fe89b44-7af0-4600-8c90-78456d455e7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\System">
+      <UniqueIdentifier>{7c736cc1-635f-4f59-873a-96d9818dd878}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\src\main.cu">
+      <Filter>src</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\Math\matrix.cuh">
+      <Filter>src\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Math\vector.cuh">
+      <Filter>src\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Colors\RGBColor.cuh">
+      <Filter>src\Colors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Math\constant.h">
+      <Filter>src\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\System\visualizer.cuh">
+      <Filter>src\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\AABB.cuh">
+      <Filter>src\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\camera.cuh">
+      <Filter>src\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\hit.cuh">
+      <Filter>src\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\ray.cuh">
+      <Filter>src\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\scene.cuh">
+      <Filter>src\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\triangle.cuh">
+      <Filter>src\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\primitive.cuh">
+      <Filter>src\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\Geometry.cuh">
+      <Filter>src\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Math\transform.cuh">
+      <Filter>src\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\intersection.cuh">
+      <Filter>src\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\samples.cuh">
+      <Filter>src\Geometry</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+  </ItemGroup>
+</Project>
