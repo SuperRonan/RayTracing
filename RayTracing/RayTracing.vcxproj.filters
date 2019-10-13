@@ -80,6 +80,18 @@
     <ClInclude Include="..\src\Geometry\samples.cuh">
       <Filter>src\Geometry</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\Materials\Material.cuh">
+      <Filter>src\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Colors\color.cuh">
+      <Filter>src\Colors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Materials\library.cuh">
+      <Filter>src\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Geometry\graph.cuh">
+      <Filter>src\Geometry</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />

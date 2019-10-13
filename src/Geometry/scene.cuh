@@ -9,8 +9,7 @@
 #include "camera.cuh"
 #include "AABB.cuh"
 #include "material_library.cuh"
-#include "castedray.cuh"
-#include "utils.cuh"
+#include "../utils.cuh"
 
 
 
@@ -21,97 +20,6 @@ namespace rt
 	namespace kernel
 	{
 
-		inline __device__ __host__ void index_to_coords(unsigned int index, unsigned int w, unsigned int h, unsigned int & i, unsigned int & j)
-		{
-			i = index / w;
-			j = index % w;
-		}
-
-
-		inline __device__ __host__ unsigned int coords_to_index(unsigned int i, unsigned int j, unsigned int w, unsigned int h)
-		{
-			return i * w + j;
-		}
-
-
-		template <class floot=float, class uint = unsigned int>
-		__device__ __host__ bool intersection_full(
-			Hit<floot> & res,
-			const Ray<floot> & ray,
-			const Triangle<floot> * triangles,
-			const uint triangles_size
-			)
-		{
-			CastedRay<floot> cray = ray;
-			for (uint i = 0; i < triangles_size; ++i)
-			{
-				cray.intersect(triangles[i]);
-			}
-			bool b = false;
-			if (cray.intersection().valid())
-			{
-				res.construct(ray, cray.intersection());
-				b = true;
-			}
-			return b;
-		}
-
-
-
-
-		template <class floot=float, class uint = unsigned int>
-		__device__ __host__ RGBColor<floot> send_ray(
-			Ray<floot> const& ray,
-			const Material<floot> ** material_library,
-			const Triangle<floot> * triangles,
-			const uint trianles_size,
-			const PointLight<floot> * plights,
-			const uint plights_size,
-			const uint max_depth,
-			const uint depth=0
-		)
-		{
-			RGBColor<floot> res = 0;
-			if (depth <= max_depth)
-			{
-				Hit<floot> hit;
-				if (intersection_full(hit, ray, triangles, trianles_size))
-				{
-					res = hit.color;
-				}
-			}
-			return res;
-		}
-
-
-		template <class floot=float, class uint=unsigned int>
-		__global__ void render(
-			RGBColor<floot> * frame_buffer,
-			const uint width, const uint height,
-			const Camera<floot> * camera,
-			const Material<floot> ** material_library,
-			const Triangle<floot> * triangles,
-			const uint triangle_size,
-			const PointLight<floot> * plights,
-			const uint plights_size,
-			const uint max_depth
-		)
-		{
-			const uint i = threadIdx.x + blockIdx.x * blockDim.x;
-			const uint j = threadIdx.y + blockIdx.y * blockDim.y;
-			if (i < height & j < width)
-			{
-				const uint index = coords_to_index(i, j, width, height);
-				const floot v = ((floot)i) / (floot)height;
-				const floot u = floot(j) / floot(width);
-
-				Ray<floot> ray = camera->get_ray(u, v);
-
-				RGBColor<floot> res = send_ray(ray, material_library, triangles, triangle_size, plights, plights_size);
-
-				frame_buffer[index] = res;
-			}
-		}
 	}
 
 

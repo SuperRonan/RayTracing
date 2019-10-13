@@ -3,7 +3,7 @@
 #include "cuda_runtime.h"
 #include <cassert>
 #include <algorithm>
-#include "Math\vector.cuh"
+#include "..\Math\vector.cuh"
 
 namespace colors
 {

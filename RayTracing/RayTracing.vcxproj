@@ -14,10 +14,12 @@
     <CudaCompile Include="..\src\main.cu" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\src\Colors\color.cuh" />
     <ClInclude Include="..\src\Colors\RGBColor.cuh" />
     <ClInclude Include="..\src\Geometry\AABB.cuh" />
     <ClInclude Include="..\src\Geometry\camera.cuh" />
     <ClInclude Include="..\src\Geometry\Geometry.cuh" />
+    <ClInclude Include="..\src\Geometry\graph.cuh" />
     <ClInclude Include="..\src\Geometry\hit.cuh" />
     <ClInclude Include="..\src\Geometry\intersection.cuh" />
     <ClInclude Include="..\src\Geometry\primitive.cuh" />
@@ -25,6 +27,8 @@
     <ClInclude Include="..\src\Geometry\samples.cuh" />
     <ClInclude Include="..\src\Geometry\scene.cuh" />
     <ClInclude Include="..\src\Geometry\triangle.cuh" />
+    <ClInclude Include="..\src\Materials\library.cuh" />
+    <ClInclude Include="..\src\Materials\Material.cuh" />
     <ClInclude Include="..\src\Math\constant.h" />
     <ClInclude Include="..\src\Math\matrix.cuh" />
     <ClInclude Include="..\src\Math\transform.cuh" />
