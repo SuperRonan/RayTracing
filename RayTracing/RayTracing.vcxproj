@@ -26,6 +26,7 @@
     <ClInclude Include="..\src\Geometry\ray.cuh" />
     <ClInclude Include="..\src\Geometry\samples.cuh" />
     <ClInclude Include="..\src\Geometry\scene.cuh" />
+    <ClInclude Include="..\src\Geometry\texture.cuh" />
     <ClInclude Include="..\src\Geometry\triangle.cuh" />
     <ClInclude Include="..\src\Materials\library.cuh" />
     <ClInclude Include="..\src\Materials\Material.cuh" />

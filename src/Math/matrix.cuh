@@ -226,7 +226,7 @@ namespace math
 			return res;
 		}
 
-		__device__ __host__ Matrix identity()const
+		static constexpr __device__ __host__ Matrix identity()
 		{
 			static_assert(N == M, "Identity matrix only for square matrices");
 			Matrix res = 0;

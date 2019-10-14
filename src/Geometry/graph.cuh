@@ -22,7 +22,7 @@ namespace geometry
 
 		Matrix4f matrix;
 
-		Node(Matrix4f const& mat):
+		Node(Matrix4f const& mat=Matrix4f::identity()):
 			matrix(mat)
 		{}
 

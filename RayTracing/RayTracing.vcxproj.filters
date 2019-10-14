@@ -92,6 +92,9 @@
     <ClInclude Include="..\src\Geometry\graph.cuh">
       <Filter>src\Geometry</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\Geometry\texture.cuh">
+      <Filter>src\Geometry</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />

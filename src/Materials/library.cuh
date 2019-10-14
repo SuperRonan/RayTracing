@@ -33,6 +33,11 @@ namespace materials
 			return m_materials[i];
 		}
 
+		bool size()const
+		{
+			return m_materials.size();
+		}
+
 
 	};
 }
