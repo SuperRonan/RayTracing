@@ -13,9 +13,9 @@ namespace geometry
 
 	public:
 
-		__device__ __host__ virtual Type getRaw(math::Vector2<floot> const& uv)const = 0;
+		//__device__ __host__ virtual Type getRaw(math::Vector2<floot> const& uv)const = 0;
 
-		__device__ __host__ virtual Type getLinear(math::Vector2<floot> const& uv)const = 0;
+		//__device__ __host__ virtual Type getLinear(math::Vector2<floot> const& uv)const = 0;
 
 	};
 
